@@ -1,3 +1,4 @@
+import { initializeApp } from './okta.js'
 const express = require('express')
 const cors = require('cors')
 const graphqlHTTP = require('express-graphql')
@@ -77,3 +78,5 @@ class Person {
     return [...POSTS.values()].filter(post => post.authorId === this.id)
   }
 }
+
+initializeApp()
